@@ -95,6 +95,9 @@
           outline: none;
           position: relative;
 
+          &:checked{
+            background: $color-font-base ;
+          }
         }
         p{
           color:$color-font-form-info;
