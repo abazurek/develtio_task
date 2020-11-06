@@ -1,0 +1,38 @@
+.footer-section{
+  background:$footer-background-color;
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+  ul{
+    color: $color-font-second;
+    margin-top: 61px;
+    margin-bottom: 90px;
+    text-align: left;
+    line-height: $base-line-height;
+    p{
+      font-size: $footer-headers-font-size;
+      margin-bottom: 15px;
+      font-weight: $bolder-font;
+    }
+    li{
+      font-size: $footer-text-font-size;
+      font-weight: 400;
+      font-family: $font-alt;
+
+      &:hover{
+        color: $color-font-accents;
+        cursor: pointer;
+      }
+    }
+    &:last-of-type{
+      li{
+        font-size: $footer-number-font-size;
+        letter-spacing: -0.25px;
+        color: $color-font-accents;
+        font-weight: $bolder-font;
+        cursor: auto;
+      }
+    }
+  }
+}
