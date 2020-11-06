@@ -1,0 +1,41 @@
+.order-section{
+  //height: 494px;
+  background-image:  url("./../../../assets/house_photo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  .text-box{
+    margin-top: 72px;
+  }
+  h2{
+    font-size:$order-section-title-font-size ;
+    font-weight: $bolder-font;
+    line-height: 68px;
+  }
+  h5{
+    font-weight: $bolder-font;
+    font-size: $order-section-subtitle-font-size;
+    line-height: 40px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  p{
+    font-family: $font-alt;
+    font-size: $order-section-paragraph-font-size;
+    font-weight: 400;
+    line-height: 28px;
+    overflow: hidden;
+    span{
+      font-weight: 700;
+    }
+  }
+
+  .button-box{
+    margin-top: 220px;
+    padding-bottom: 96px;
+    button{
+      @include button(16px, 50px, 18px, 50px);
+    }
+  }
+
+}

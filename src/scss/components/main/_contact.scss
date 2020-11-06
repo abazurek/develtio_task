@@ -11,7 +11,7 @@
     background-color: $contact-blue-box-background-color;
     .text-box{
       padding-top: 48px;
-      font-weight: 700;
+      font-weight: $bolder-font;
       max-width: 648px;
       padding-bottom: 64px;
       h3{
@@ -47,7 +47,7 @@
       font-size: $form-title-font-size;
       line-height: $base-line-height;
       margin-bottom: 20px;
-      font-weight: 700;
+      font-weight: $bolder-font;
     }
     form{
       display: flex;
