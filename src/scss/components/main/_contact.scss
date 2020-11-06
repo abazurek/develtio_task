@@ -1,3 +1,138 @@
 .contact-section{
+  height: 732px;
+  background-image: url("./../../../assets/family-photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  .blue-box{
+    background-color: $contact-blue-box-background-color;
+    .text-box{
+      padding-top: 48px;
+      font-weight: 700;
+      max-width: 648px;
+      padding-bottom: 64px;
+      h3{
 
-}
+        font-size: $contact-section-title-font-size;
+        color: $color-font-accents;
+        line-height: 56px;
+      }
+      p{
+        margin-top: 8px;
+        font-size: $contact-section-subtitle-font-size;
+        color: $color-font-second;
+        line-height: 36px;
+
+      }
+    }
+  }
+  &>.container{
+    display: flex;
+    justify-content: flex-end;
+
+    }
+  .form-box{
+    position: absolute;
+    bottom:64px ;
+    z-index: 1;
+    background: $background-color-base;
+    box-shadow: 0 8px 48px rgba(22, 22, 22, 0.08);
+    border-radius: 10px;
+    padding: 40px;
+    width: 409px;
+    p{
+      font-size: $form-title-font-size;
+      line-height: $base-line-height;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      font-family: $font-alt;
+      label{
+        margin-bottom: 12px;
+        box-sizing: content-box;
+       input{
+         @include input-border;
+         width: 391px;
+         padding: 13px 0 13px 16px;
+         color: $color-font-input-text;
+         line-height: $base-line-height;
+         font-weight: 500;
+         font-size: $form-input-font-size;
+         font-family: $font-alt;
+         &::placeholder{
+
+           color: $color-font-input-placeholder;
+         }
+         &:focus{
+           outline: none;
+         }
+       }
+      }
+      .checkbox-label{
+        display: flex;
+        justify-content: space-between;
+        div{
+          width: 17px;
+          margin-right: 14px;
+        }
+        input {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          @include input-border;
+          width: 17px;
+          height: 17px;
+          margin: 0;
+          padding: 0;
+          display: inline-block;
+          vertical-align: middle;
+          outline: none;
+          position: relative;
+
+        }
+        p{
+          color:$color-font-form-info;
+          font-size: $form-info-font-size;
+          text-align: left;
+          font-weight: 300;
+          line-height: 18px;
+          margin-bottom: 4px;
+        }
+      }
+      div{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        label{
+          &:first-of-type{
+            input{
+              width: 231px;
+            }
+
+          }
+          &:last-of-type{
+            input{
+              width: 130px;
+            }
+
+          }
+        }
+      }
+      .form-button-box{
+        display: flex;
+        justify-content: center;
+        button{
+          @include button(13px, 78px, 12px, 79px)
+        }
+      }
+
+    }
+  }
+  }
+

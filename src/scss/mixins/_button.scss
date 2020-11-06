@@ -1,0 +1,11 @@
+@mixin button ($paddingTop,$paddingRight , $paddingBottom, $paddingLeft){
+  background:$button-background-color;
+  font-size:$button-font-size ;
+  line-height: 21px;
+  text-align: center;
+  font-weight: 700;
+  padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
+  border: none;
+  border-radius: 10px;
+  color: $color-font-second;
+}
