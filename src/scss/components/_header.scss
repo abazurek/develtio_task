@@ -39,6 +39,9 @@
     li{
       margin-left: 30px;
       font-weight: 500;
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 }
