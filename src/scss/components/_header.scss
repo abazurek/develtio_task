@@ -1,0 +1,44 @@
+.header-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: $font-alt;
+  line-height: 26px;
+  .logo-box{
+    margin-top: 13px;
+    margin-bottom: 18px;
+    margin-right: 9px;
+    .images-box{
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin-right: 49px;
+      margin-bottom: 8px;
+    }
+    h4{
+      font-size: $header-title-font-size;
+      font-weight: 300;
+      text-align: center;
+      span{
+        font-weight: 800;
+      }
+    }
+
+    p{
+      font-size: $header-subtitle-font-size;
+      text-align: right;
+    }
+  }
+
+  ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 23px;
+    font-size: $header-nav-font-size;
+    li{
+      margin-left: 30px;
+      font-weight: 500;
+    }
+  }
+}
