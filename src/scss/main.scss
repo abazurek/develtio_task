@@ -22,22 +22,25 @@ body {
 .container{
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1267px;
-  //max-width: 300px;
-  //@media (min-width: 500px) {
-  //  max-width: 450px;
-  //}
-  //@media #{$media-tablet} {
-  //  padding: 0 20px;
-  //  max-width: 700px;
-  //}
-  //@media #{$media-desktop} {
-  //  max-width: 1267px;
-  //  padding: 0 25px;
-  //}
-  //@media #{$media-big-screen} {
-  //  max-width: 1700px;
-  //  padding: 0 30px;
-  //}
+  padding: 0 10px;
+  max-width: 300px;
+  @media #{$media-phone} {
+    max-width: 550px;
+  }
+  @media #{$media-tablet} {
+    padding: 0 15px;
+    max-width: 750px;
+  }
+  @media #{$media-desktop} {
+    max-width: 970px;
+    padding: 0 20px;
+  }
+  @media #{$media-big-desktop} {
+    max-width: 1267px;
+    padding: 0 20px;
+  }
+  @media #{$media-hd-screen} {
+    max-width: 1600px;
+    padding: 0 30px;
+  }
 }
