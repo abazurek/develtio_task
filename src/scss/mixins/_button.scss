@@ -2,7 +2,7 @@
   background:$button-background-color;
   font-size:$button-font-size ;
   @include font-for-media($button-font-size);
-  line-height: 21px;
+  @include line-heights-for-media(21px);
   text-align: center;
   font-weight: 700;
   padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
