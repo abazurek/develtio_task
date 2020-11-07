@@ -3,7 +3,7 @@ import React from 'react';
 export default function Order() {
 
     return (
-        <div className='order-section'>
+        <section className='order-section'>
             <div className='container'>
                 <div className='text-box'>
                     <h2>Ubezpieczenia majątkowe</h2>
@@ -25,6 +25,6 @@ export default function Order() {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }

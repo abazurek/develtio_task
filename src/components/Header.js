@@ -27,7 +27,7 @@ export default function Header({isExtraSmall, isPhone, isTablet}) {
     }
 
     return(
-        <div className='container header-section'>
+        <header className='container header-section'>
             <div className='logo-box'>
                 <div className='images-box'>
                     <img src={smallerRectangle} alt='rectangle icon'/>
@@ -45,6 +45,6 @@ export default function Header({isExtraSmall, isPhone, isTablet}) {
               list
             }
 
-        </div>
+        </header>
     )
 }

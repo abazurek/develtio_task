@@ -1,0 +1,15 @@
+@mixin font-for-media($base-font-size){
+  font-size: $base-font-size*0.6;
+  @media #{$media-phone, $media-tablet} {
+    font-size: $base-font-size*0.7;
+  }
+  @media #{$media-desktop} {
+    font-size: $base-font-size*0.8;
+  }
+  @media #{$media-big-desktop} {
+    font-size: $base-font-size;
+  }
+  @media #{$media-hd-screen} {
+  font-size: $base-font-size*1.2;
+}}
+

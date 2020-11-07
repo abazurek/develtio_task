@@ -4,7 +4,7 @@ import Form from "./Form";
 export default function Contanct() {
 
     return (
-        <div className='contact-section'>
+        <section className='contact-section'>
             <div className='container'>
                 <div className='form-box'>
                     <p>Podaj dane kontaktowe, a my przygotujemy najlepszą ofertę</p>
@@ -21,6 +21,6 @@ export default function Contanct() {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }

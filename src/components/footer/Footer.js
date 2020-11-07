@@ -4,7 +4,7 @@ import List from "./List";
 export default function Footer() {
 
     return (
-        <div className='footer-section'>
+        <footer className='footer-section'>
             <div className='container'>
                 <List title='O nas' li1='Strona główna' li2="O nas" li3='Dołącz do nas' li4='Zostań Agentem'
                       li5='Kariera'/>
@@ -17,6 +17,6 @@ export default function Footer() {
                       <List title='infolinia' li1='+48 22 311 1234'/>
 
             </div>
-        </div>
+        </footer>
     )
 }
