@@ -10,28 +10,18 @@ function App() {
         query:'(max-width:575px)'
     });
     const isPhone = useMediaQuery({
-        query:'(min-width:576px) and (max-width:768px)'
+        query:'(min-width:576px) and (max-width:767px)'
     });
     const isTablet = useMediaQuery({
-        query: '(min-width:769px) and (max-width:992px)'
+        query: '(min-width:768px) and (max-width:992px)'
     });
-    // const isDesktop = useMediaQuery({
-    //     query: '(min-width:993px) and (max-width:1300px)'
-    // });
-    // const isBigDesktop = useMediaQuery({
-    //     query:'(min-width:1301px) and (max-width:1600px)'
-    // });
-    // const isHdScreen = useMediaQuery({
-    //     query:'(min-width:1601px)'
-    // });
-
 
 
   return (
     <div className="App">
       <Header isExtraSmall={isExtraSmall} isPhone={isPhone} isTablet={isTablet}/>
       <Main/>
-      <Footer/>
+      <Footer isExtraSmall={isExtraSmall} isPhone={isPhone}/>
     </div>
   );
 }

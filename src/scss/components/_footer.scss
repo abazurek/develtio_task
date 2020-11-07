@@ -1,33 +1,53 @@
-.footer-section{
-  background:$footer-background-color;
-  .container{
+.footer-section {
+  background: $footer-background-color;
+  color: $color-font-second;
+  .container {
     display: flex;
+    @media #{$media-extraSmall, $media-phone} {
+      flex-direction: column;
+      align-items: center;
+    }
     justify-content: space-between;
+
   }
-  ul{
-    color: $color-font-second;
+
+  ul {
     margin-top: 61px;
     margin-bottom: 90px;
+    @media #{$media-extraSmall, $media-phone} {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
     text-align: left;
     line-height: $base-line-height;
-    p{
-      font-size: $footer-headers-font-size;
-      margin-bottom: 15px;
-      font-weight: $bolder-font;
+    @media #{$media-extraSmall, $media-phone} {
+      text-align: center;
     }
-    li{
-      font-size: $footer-text-font-size;
+
+    p {
+      @include font-for-media($footer-headers-font-size);
+      font-weight: $bolder-font;
+      margin-bottom: 15px;
+      @media #{$media-extraSmall, $media-phone} {
+        margin-bottom: 5px;
+      }
+    }
+
+    li {
+      @include font-for-media($footer-text-font-size);
       font-weight: 400;
       font-family: $font-alt;
 
-      &:hover{
+      &:hover {
         color: $color-font-accents;
         cursor: pointer;
       }
     }
-    &:last-of-type{
-      li{
-        font-size: $footer-number-font-size;
+
+    &:last-of-type {
+      li {
+        @include font-for-media($footer-number-font-size);
         letter-spacing: -0.25px;
         color: $color-font-accents;
         font-weight: $bolder-font;
