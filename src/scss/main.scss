@@ -29,7 +29,7 @@ body {
   }
   @media #{$media-tablet} {
     padding: 0 15px;
-    max-width: 750px;
+    max-width: 730px;
   }
   @media #{$media-desktop} {
     max-width: 970px;
@@ -40,7 +40,7 @@ body {
     padding: 0 20px;
   }
   @media #{$media-hd-screen} {
-    max-width: 1600px;
+    max-width: 1550px;
     padding: 0 30px;
   }
 }

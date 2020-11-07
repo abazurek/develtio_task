@@ -6,9 +6,9 @@ import Order from "./Order";
 export default function Main() {
 
     return(
-        <>
+        <main>
             <Contact/>
             <Order/>
-        </>
+        </main>
     )
 }

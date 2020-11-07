@@ -1,0 +1,15 @@
+@mixin line-heights-for-media($base-line-height){
+  line-height: $base-line-height*0.6;
+  @media #{$media-phone, $media-tablet} {
+    line-height: $base-line-height*0.7;
+  }
+  @media #{$media-desktop} {
+    line-height: $base-line-height*0.8;
+  }
+  @media #{$media-big-desktop} {
+    line-height: $base-line-height;
+  }
+  @media #{$media-hd-screen} {
+    line-height: $base-line-height*1.2;
+  }
+}

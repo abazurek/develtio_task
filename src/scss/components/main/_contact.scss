@@ -1,93 +1,175 @@
-.contact-section{
+.contact-section {
   height: 732px;
   background-image: url("./../../../assets/family-photo.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: flex-end;
   position: relative;
-  .blue-box{
+  background-position-x: -750px;
+  @media #{$media-phone} {
+    background-position-x: -700px;
+  }
+  @media #{$media-tablet} {
+    background-position-x: -500px;
+  }
+  @media #{$media-desktop} {
+    background-position-x: -300px;
+  }
+  @media #{ $media-big-desktop, $media-hd-screen} {
+    background-position-x: 0;
+  }
+  @media #{$media-tablet, $media-desktop, $media-big-desktop, $media-hd-screen} {
+    flex-direction: column;
+  }
+
+  .blue-box {
     background-color: $contact-blue-box-background-color;
-    .text-box{
+
+    .text-box {
       padding-top: 48px;
       font-weight: $bolder-font;
-      max-width: 648px;
-      padding-bottom: 64px;
-      h3{
-
-        font-size: $contact-section-title-font-size;
-        color: $color-font-accents;
-        line-height: 56px;
+      max-width: 250px;
+      @media #{$media-phone} {
+        max-width: 500px;
       }
-      p{
+      @media #{$media-tablet,$media-desktop} {
+        max-width: 550px;
+      }
+      @media #{$media-big-desktop} {
+        max-width: 648px;
+      }
+      @media #{$media-hd-screen} {
+        max-width: 800px;
+      }
+      padding-bottom: 64px;
+
+      h3 {
+        @include font-for-media($contact-section-title-font-size);
+        color: $color-font-accents;
+        @include line-heights-for-media(56px)
+      }
+
+      p {
         margin-top: 8px;
-        font-size: $contact-section-subtitle-font-size;
+        @include font-for-media($contact-section-subtitle-font-size);
         color: $color-font-second;
-        line-height: 36px;
+        @include line-heights-for-media(36px)
 
       }
     }
   }
-  &>.container{
+
+  & > .container {
     display: flex;
     justify-content: flex-end;
 
-    }
-  .form-box{
+  }
+
+  .form-box {
     position: absolute;
-    bottom:64px ;
+    bottom: 64px;
     z-index: 1;
     background: $background-color-base;
     box-shadow: 0 8px 48px rgba(22, 22, 22, 0.08);
     border-radius: 10px;
-    padding: 40px;
-    width: 409px;
-    p{
-      font-size: $form-title-font-size;
-      line-height: $base-line-height;
+    padding: 20px;
+    width: 230px;
+    @media #{$media-extraSmall,$media-phone} {
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 0);
+      bottom: 50px;
+    }
+    @media #{$media-tablet} {
+      bottom: 150px;
+    }
+    @media #{$media-phone} {
+      bottom: 70px;
+    }
+    @media #{$media-phone, $media-tablet,$media-desktop} {
+      width: 300px;
+      padding: 25px;
+    }
+    @media #{$media-big-desktop} {
+      padding: 40px;
+      width: 409px;
+    }
+    @media #{$media-hd-screen} {
+      width: 450px;
+    }
+
+    p {
+      @include font-for-media($form-title-font-size);
+      @include line-heights-for-media($base-line-height);
       margin-bottom: 20px;
       font-weight: $bolder-font;
     }
-    form{
+
+    form {
       display: flex;
       flex-direction: column;
       font-family: $font-alt;
-      label{
-        margin-bottom: 12px;
-        box-sizing: content-box;
-       input{
-         @include input-border;
-         width: 391px;
-         padding: 13px 0 13px 16px;
-         color: $color-font-input-text;
-         line-height: $base-line-height;
-         font-weight: 500;
-         font-size: $form-input-font-size;
-         font-family: $font-alt;
-         &::placeholder{
 
-           color: $color-font-input-placeholder;
-         }
-         &:focus{
-           outline: none;
-         }
-       }
+      label {
+        margin-bottom: 12px;
+
+        input {
+          @include input-border;
+          width: 223px;
+          padding: 5px 0 5px 7px;
+          @media #{$media-phone,$media-tablet,$media-desktop,$media-big-desktop,$media-hd-screen} {
+            padding: 13px 0 13px 16px;
+          }
+          color: $color-font-input-text;
+          font-weight: 500;
+          font-family: $font-alt;
+          @include line-heights-for-media($base-line-height);
+          @include font-for-media($form-input-font-size);
+          @media #{$media-phone,$media-tablet,$media-desktop} {
+            width: 280px;
+          }
+          @media #{$media-big-desktop} {
+            width: 391px;
+          }
+          @media #{$media-hd-screen} {
+            width: 434px;
+          }
+
+          &::placeholder {
+            color: $color-font-input-placeholder;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
       }
-      .checkbox-label{
+
+      .checkbox-label {
         display: flex;
         justify-content: space-between;
-        div{
+
+        div {
           width: 17px;
-          margin-right: 14px;
+          margin-right: 7px;
+          @media #{$media-tablet,$media-desktop,$media-big-desktop,$media-hd-screen} {
+            margin-right: 14px;
+          }
         }
+
         input {
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
           @include input-border;
-          width: 17px;
-          height: 17px;
+          width: 10px;
+          height: 10px;
+          @media #{$media-tablet,$media-desktop,$media-big-desktop,$media-hd-screen} {
+            width: 17px;
+            height: 17px;
+          }
           margin: 0;
           padding: 0;
           display: inline-block;
@@ -95,47 +177,71 @@
           outline: none;
           position: relative;
 
-          &:checked{
-            background: $color-font-base ;
+          &:checked {
+            background: $color-font-base;
           }
         }
-        p{
-          color:$color-font-form-info;
-          font-size: $form-info-font-size;
+
+        p {
+          color: $color-font-form-info;
+          @include font-for-media($form-info-font-size);
           text-align: left;
           font-weight: 300;
-          line-height: 18px;
+          @include line-heights-for-media(18px);
           margin-bottom: 4px;
         }
       }
-      div{
+
+      div {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        label{
-          &:first-of-type{
-            input{
-              width: 231px;
+
+        label {
+          &:first-of-type {
+            input {
+              width: 130px;
+              @media #{$media-phone,$media-tablet,$media-desktop} {
+                width: 150px;
+              }
+              @media #{$media-big-desktop} {
+                width: 231px;
+              }
+              @media #{$media-hd-screen} {
+                width: 260px;
+              }
             }
 
           }
-          &:last-of-type{
-            input{
-              width: 130px;
+
+          &:last-of-type {
+            input {
+              width: 70px;
+              @media #{$media-phone, $media-tablet,$media-desktop} {
+                width: 100px;
+              }
+              @media #{$media-big-desktop} {
+                width: 130px;
+              }
+              @media #{$media-hd-screen} {
+                width: 140px;
+              }
             }
 
           }
         }
       }
-      .form-button-box{
+
+      .form-button-box {
         display: flex;
         justify-content: center;
-        button{
+
+        button {
           @include button(13px, 78px, 12px, 79px)
         }
       }
 
     }
   }
-  }
+}
 

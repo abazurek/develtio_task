@@ -48,7 +48,7 @@
       position: absolute;
       bottom: -290px;
       @media #{$media-tablet} {
-        bottom: -290px;
+        bottom: -270px;
         max-width: 250px;
       }
       right: 0;
@@ -64,15 +64,17 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 23px;
-    @media #{$media-big-desktop, $media-hd-screen} {
-      font-size: $header-nav-font-size;
-    }
-    @media #{$media-tablet} {
-      font-size: $header-nav-font-size * 0.8;
-    }
+    @include font-for-media($header-nav-font-size);
     font-size: $header-nav-font-size * 0.7;
+    @media #{$media-desktop} {
+      font-size: $header-nav-font-size * 0.7;
+    }
     li{
       margin-left: 30px;
+
+      @media #{$media-desktop} {
+        margin-left: 20px;
+      }
       font-weight: 500;
       &:hover{
         cursor: pointer;
