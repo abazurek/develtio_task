@@ -97,7 +97,9 @@
       width: 409px;
     }
     @media #{$media-hd-screen} {
+      padding: 40px;
       width: 450px;
+      bottom: 10px;
     }
 
     p {
