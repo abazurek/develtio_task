@@ -237,7 +237,10 @@
         justify-content: center;
 
         button {
-          @include button(13px, 78px, 12px, 79px)
+          @include button(13px, 78px, 12px, 79px);
+          @media #{$media-extraSmall, $media-phone} {
+            @include button(10px, 50px, 10px, 50px)
+          }
         }
       }
 

@@ -1,30 +1,39 @@
 .order-section{
-  //height: 494px;
   background-image:  url("./../../../assets/house_photo.png");
+  background-position: bottom right;
   background-size: contain;
+  @media #{$media-extraSmall} {
+    background-size: cover;
+    background-position-x:-100px ;
+  }
   background-repeat: no-repeat;
-  background-position: right;
   .text-box{
     margin-top: 72px;
+    @media #{$media-extraSmall,$media-phone} {
+      margin-top: 32px;
+    }
+    @media #{$media-big-desktop} {
+      margin-top: 102px;
+    }
   }
   h2{
-    font-size:$order-section-title-font-size ;
+    @include font-for-media($order-section-title-font-size);
     font-weight: $bolder-font;
-    line-height: 68px;
+    @include line-heights-for-media( 68px);
   }
   h5{
     font-weight: $bolder-font;
-    font-size: $order-section-subtitle-font-size;
-    line-height: 40px;
+    @include font-for-media($order-section-subtitle-font-size);
+   @include line-heights-for-media( 40px);
     margin-top: 8px;
     margin-bottom: 24px;
   }
   p{
     font-family: $font-alt;
-    font-size: $order-section-paragraph-font-size;
+   @include font-for-media($order-section-paragraph-font-size);
     color: $color-font-paragraph;
     font-weight: 400;
-    line-height: 28px;
+    @include line-heights-for-media(28px);
     overflow: hidden;
     span{
       font-weight: 700;
@@ -32,10 +41,17 @@
   }
 
   .button-box{
-    margin-top: 220px;
+    margin-top: 50px;
+    @media #{$media-big-desktop} {
+      margin-top: 220px;
+    }
     padding-bottom: 96px;
     button{
-      @include button(16px, 50px, 18px, 50px);
+      @include button(15px, 25px, 15px, 25px);
+      @media #{$media-tablet, $media-desktop, $media-big-desktop, $media-hd-screen} {
+        @include button(16px, 50px, 18px, 50px);
+      }
+
     }
   }
 
